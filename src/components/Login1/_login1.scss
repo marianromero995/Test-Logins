@@ -26,7 +26,7 @@
     .title {
       font-weight: 800;
       font-size: 4rem;
-      padding-top: 160px;
+      padding-top: 25%;
     }
 
     .content {
@@ -34,6 +34,7 @@
       font-size: 1.5rem;
       width: 75%;
       margin-top: 15px;
+      max-width: 1000px;
     }
   }
 
@@ -147,7 +148,7 @@
 
           input[type="checkbox"] + .label::before {
             display: block;
-            border: 1px solid #70A9A1;
+            border: 1px solid #70a9a1;
             border-radius: 25%;
             left: -5px;
             height: 20px;
@@ -201,8 +202,8 @@
         line-height: 33px;
         color: #ffffff;
 
-        cursor:  pointer;
-  
+        cursor: pointer;
+
         img {
           margin-left: 10px;
         }
@@ -281,7 +282,6 @@
               width: 14px;
               left: 3px;
             }
-  
           }
 
           .fp-container {
