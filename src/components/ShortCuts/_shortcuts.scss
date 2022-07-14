@@ -1,0 +1,121 @@
+@import "../../App.scss";
+
+.Shortcuts {
+  background-color: #1666b5;
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  .shorcut-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    .shorcut-img {
+      height: 24.8px;
+      width: 24.8px;
+      left: 136px;
+      top: 8px;
+      border-radius: 0px;
+    }
+    .shorcut-item-text,
+    .shorcut-item-text-last {
+      height: 26px;
+      left: 1209.4px;
+      top: 7px;
+      display: flex;
+      align-items: center;
+      span {
+        font-family: "Work Sans";
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 21px;
+        letter-spacing: 2px;
+        text-align: left;
+        color: #ffffff;
+        margin-left: 12px;
+      }
+    }
+    .shorcut-item-text {
+      margin-right: 70px;
+    }
+    .shorcut-item-text-last {
+      margin-right: 0px;
+    }
+    &:hover,
+    &:active {
+      .shorcut-item-text,
+      .shorcut-item-text-last {
+        span {
+          color: #ffcd00;
+        }
+      }
+
+      .shorcut-img {
+        filter: invert(0.33) sepia(1) saturate(3.3) hue-rotate(0deg) brightness(0.86);
+      }
+    }
+  }
+}
+
+@media (max-width: 1115px) {
+  .Shortcuts {
+    .shorcut-item {
+      .shorcut-item-text {
+        margin-right: 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .Shortcuts {
+    .shorcut-item {
+      .shorcut-img {
+        height: 18px;
+        width: 18px;
+      }
+      .shorcut-item-text,
+      .shorcut-item-text-last {
+        span {
+          font-size: 16px;
+          margin-left: 5px;
+          margin-top: -2px;
+        }
+      }
+      .shorcut-item-text {
+        margin-right: 15px;
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .Shortcuts {
+    .shorcut-item {
+      .shorcut-img {
+        height: 15px;
+        width: 15px;
+      }
+      .shorcut-item-text,
+      .shorcut-item-text-last {
+        span {
+          font-size: 14px;
+          margin-left: 5px;
+          margin-top: -2px;
+        }
+      }
+      .shorcut-item-text {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .Shortcuts {
+    display: none;
+  }
+}

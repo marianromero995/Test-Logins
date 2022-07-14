@@ -1,0 +1,195 @@
+@import "../../App.scss";
+
+.Header {
+  background-color: #115292;
+  display: flex;
+  flex-direction: row;
+  height: 60px;
+  .lft {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 5%;
+    text-align: left;
+    align-items: center;
+    .burger-icon {
+      background-color: #1666b5;
+      height: 60px;
+      width: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .center {
+    flex-basis: 79%;
+    text-align: start;
+    align-self: center;
+    .logo {
+      height: 25px;
+      padding-left: 15px;
+      cursor: pointer;
+    }
+  }
+
+  .rgt {
+    flex-basis: 16%;
+    justify-content: flex-end;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .notification-icon {
+      height: 40px;
+      width: 50px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      .bell {
+        height: 25px;
+        width: 25px;
+      }
+      .notification-icon-number {
+        position: absolute;
+        border-radius: 50%;
+        border: 2px solid #115292;
+        background-color: #df0f41;
+        top: 0px;
+        left: 25px;
+        height: 16px;
+        width: 16px;
+        display: flex;
+        place-content: center;
+        align-items: center;
+        span {
+          color: #ffffff;
+          font-size: 10px;
+        }
+      }
+    }
+    .envelope-icon {
+      height: 25px;
+      width: 56px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      margin-right: 5.5px;
+      .envelope {
+        height: 40px;
+        width: 40px;
+      }
+      .notification-icon-number-envelope {
+        position: absolute;
+        border-radius: 50%;
+        border: 2px solid #115292;
+        background-color: #df0f41;
+        top: -7px;
+        left: 35px;
+        height: 16px;
+        width: 16px;
+        display: flex;
+        place-content: center;
+        align-items: center;
+        span {
+          color: #ffffff;
+          font-size: 10px;
+        }
+      }
+    }
+    .user {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      place-content: space-evenly;
+      border-left: 1px solid #1666b5;
+      height: 60px;
+      width: 112px;
+      .user-icon {
+        margin-right: 5px;
+        border-radius: 0px;
+        display: flex;
+        .img {
+          height: 32px;
+          width: 32px;
+        }
+        .notification-icon-number-user {
+          display: none;
+        }
+      }
+      .down-arrow-icon {
+        display: flex;
+        .vector {
+          height: 18px;
+          width: 18px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .Header {
+    height: 52px;
+    top: 37px;
+    .lft {
+      height: 52px;
+      width: 64px;
+      flex-basis: 25%;
+      .burger-icon {
+        height: 52px;
+        width: 64px;
+      }
+    }
+    .center {
+      flex-basis: 50%;
+      text-align: center;
+      .logo {
+        height: 25px;
+        padding-left: 15px;
+      }
+    }
+
+    .rgt {
+      flex-basis: 25%;
+      justify-content: flex-end;
+      .notification-icon {
+        display: none;
+      }
+      .envelope-icon {
+        display: none;
+      }
+      .user {
+        height: 52px;
+        width: 64px;
+        .user-icon {
+          height: 32px;
+          width: 32px;
+          margin-right: 0px;
+          position: relative;
+          .notification-icon-number-user {
+            position: absolute;
+            border-radius: 50%;
+            border: 2px solid #115292;
+            background-color: #df0f41;
+            top: -5px;
+            left: 25px;
+            height: 16px;
+            width: 16px;
+            display: flex;
+            place-content: center;
+            align-items: center;
+            span {
+              color: #ffffff;
+              font-size: 10px;
+            }
+          }
+        }
+        .down-arrow-icon {
+          display: none;
+        }
+      }
+    }
+  }
+}

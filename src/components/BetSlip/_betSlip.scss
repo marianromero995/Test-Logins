@@ -1,0 +1,539 @@
+@import "../../App.scss";
+
+.BetSlip {
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #115292;
+  min-height: 750px;
+  border-radius: 4px;
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 16px;
+    height: 40px;
+    background-color: #115292;
+    .mobile-line {
+      display: none;
+    }
+    .amount-container {
+      display: flex;
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      background-color: #43babf;
+      justify-content: center;
+      align-items: center;
+      span {
+        font-family: "Work Sans";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 28px;
+        text-align: center;
+        color: #ffffff;
+      }
+    }
+    .title {
+      height: 28px;
+      margin-left: 15px;
+      span {
+        font-family: "Work Sans";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 28px;
+        text-align: center;
+        color: #ffffff;
+      }
+    }
+  }
+  .top-header {
+    height: 20px;
+    padding: 6px 16px 6px 16px;
+    background-color: #43babf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span {
+      font-family: "Work Sans";
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 16px;
+      text-align: center;
+      color: #ffffff;
+    }
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    background: #ffffff;
+    border-radius: 4px;
+    .contain-header {
+      display: flex;
+      flex-direction: row;
+      place-content: space-between;
+      margin: 15px 0px 24px 0px;
+      .contain-lft {
+        span {
+          font-family: "Work Sans";
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 28px;
+          letter-spacing: -0.02em;
+          text-align: left;
+          color: #1666b5;
+        }
+      }
+      .contain-rgt {
+        span {
+          font-family: "Work Sans";
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 28px;
+          letter-spacing: -0.02em;
+          text-align: right;
+          color: #1666b5;
+        }
+      }
+    }
+    .lft-text {
+      font-family: "Work Sans";
+      font-size: 10px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 20px;
+      text-align: left;
+      color: #115292;
+    }
+    .lft-dropdown {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 24px 0px 12px 0px;
+      .dropdown-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        height: 23px;
+        width: 198px;
+        left: 16px;
+        top: 152px;
+        border-radius: 4px;
+        padding: 1px 1px 1px 1px;
+        background-color: #1666b5;
+        span {
+          font-family: "Work Sans";
+          font-size: 10px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 16px;
+          letter-spacing: 1px;
+          text-align: center;
+          color: #ffffff;
+        }
+        .down-arrow-icon {
+          display: flex;
+          .fa-chevron-down {
+            color: #ffffff;
+            font-size: x-small;
+          }
+        }
+      }
+    }
+    .risk-win {
+      display: flex;
+      height: 40px;
+      border-radius: 4px;
+      place-content: space-between;
+      margin: 12px 0px 24px 0px;
+      .lft-contain {
+        height: 40px;
+        width: 38%;
+        border-radius: 4px;
+        display: flex;
+        flex-direction: row;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.24);
+        place-content: space-between;
+        border-radius: 4px;
+        padding: 0px 15px;
+        .lft {
+          height: 40px;
+          display: flex;
+          flex-direction: row;
+          span {
+            font-family: "Work Sans";
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 16px;
+            display: flex;
+            align-items: center;
+            letter-spacing: -0.02em;
+            text-transform: capitalize;
+            color: #0a2e52;
+          }
+        }
+        .rgt {
+          display: flex;
+          flex-direction: row;
+          span {
+            font-family: "Work Sans";
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 16px;
+            display: flex;
+            align-items: center;
+            letter-spacing: -0.02em;
+            text-transform: capitalize;
+            color: #0a2e52;
+          }
+          input {
+            width: 100%;
+            font-family: "Work Sans";
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 16px;
+            display: flex;
+            align-items: center;
+            letter-spacing: -0.02em;
+            text-transform: capitalize;
+            text-align: end;
+            color: #0a2e52;
+            border: none;
+            position: relative;
+            left: 15px;
+            border-radius: 4px;
+            padding: 0px;
+          }
+          input:focus,
+          input:hover {
+            outline: none !important;
+          }
+          textarea:focus {
+            outline: none !important;
+          }
+          input::placeholder {
+            color: #0a2e52;
+          }
+          input:-webkit-autofill,
+          input:-webkit-autofill:hover,
+          input:-webkit-autofill:focus,
+          input:-webkit-autofill:active {
+            -webkit-box-shadow: 0 0 0 30px white inset !important;
+          }
+        }
+      }
+      .rgt-contain {
+        height: 40px;
+        width: 38%;
+        border-radius: 4px;
+        display: flex;
+        flex-direction: row;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.24);
+        border-radius: 4px;
+        padding: 0px 15px;
+        place-content: space-between;
+        .lft {
+          height: 40px;
+          display: flex;
+          span {
+            font-family: "Work Sans";
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 16px;
+            display: flex;
+            align-items: center;
+            letter-spacing: -0.02em;
+            text-transform: capitalize;
+            color: #0a2e52;
+          }
+        }
+        .rgt {
+          height: 40px;
+          display: flex;
+          span {
+            font-family: "Work Sans";
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 16px;
+            display: flex;
+            align-items: center;
+            letter-spacing: -0.02em;
+            text-transform: capitalize;
+            color: #0a2e52;
+          }
+          input {
+            width: 100%;
+            font-family: "Work Sans";
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 16px;
+            display: flex;
+            align-items: center;
+            letter-spacing: -0.02em;
+            text-transform: capitalize;
+            text-align: end;
+            color: #0a2e52;
+            border: none;
+            position: relative;
+            border-radius: 4px;
+            padding: 0px;
+          }
+          input:focus,
+          input:hover {
+            outline: none !important;
+          }
+          textarea:focus {
+            outline: none !important;
+          }
+          input::placeholder {
+            color: #0a2e52;
+          }
+          input:-webkit-autofill,
+          input:-webkit-autofill:hover,
+          input:-webkit-autofill:focus,
+          input:-webkit-autofill:active {
+            -webkit-box-shadow: 0 0 0 30px white inset !important;
+          }
+        }
+      }
+    }
+    hr {
+      width: 100%;
+      border: 2px solid #115292;
+      background-color: #115292;
+    }
+    .base-bet-all {
+      display: flex;
+      flex-direction: row;
+      place-content: space-between;
+      margin: 24px 0px;
+      .lft-contain {
+        height: 40px;
+        width: 38%;
+        border-radius: 4px;
+        display: flex;
+        flex-direction: row;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.24);
+        place-content: space-between;
+        border-radius: 4px;
+        padding: 0px 15px;
+        .lft {
+          height: 40px;
+          display: flex;
+          flex-direction: row;
+          span {
+            font-family: "Work Sans";
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 16px;
+            display: flex;
+            align-items: center;
+            letter-spacing: -0.02em;
+            text-transform: capitalize;
+            color: #0a2e52;
+          }
+        }
+        .rgt {
+          display: flex;
+          flex-direction: row;
+          span {
+            font-family: "Work Sans";
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 16px;
+            display: flex;
+            align-items: center;
+            letter-spacing: -0.02em;
+            text-transform: capitalize;
+            color: #0a2e52;
+          }
+          input {
+            width: 100%;
+            font-family: "Work Sans";
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 16px;
+            display: flex;
+            align-items: center;
+            letter-spacing: -0.02em;
+            text-transform: capitalize;
+            text-align: end;
+            color: #0a2e52;
+            border: none;
+            position: relative;
+            border-radius: 4px;
+            padding: 0px;
+          }
+          input:focus,
+          input:hover {
+            outline: none !important;
+          }
+          textarea:focus {
+            outline: none !important;
+          }
+          input::placeholder {
+            color: #0a2e52;
+          }
+          input:-webkit-autofill,
+          input:-webkit-autofill:hover,
+          input:-webkit-autofill:focus,
+          input:-webkit-autofill:active {
+            -webkit-box-shadow: 0 0 0 30px white inset !important;
+          }
+        }
+      }
+      .rgt-contain {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 46%;
+        width: 38.5%;
+        .bet-button {
+          border: none;
+          width: 100%;
+          height: 40px;
+          background: #43babf;
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          border-radius: 4px;
+          font-family: "Work Sans";
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 21px;
+          letter-spacing: 0.02em;
+          text-align: center;
+          color: #ffffff;
+          text-transform: uppercase;
+          cursor: pointer;
+        }
+        &:hover {
+          .bet-button {
+            background: darken(#43babf, 2%);
+          }
+        }
+      }
+    }
+
+    .bets-table {
+      margin: 24px 0px;
+      .bets-table-rows {
+        display: flex;
+        flex-direction: row;
+        .lft-text,   .rgt-text {
+          flex-basis: 50%;
+          font-family: "Work Sans";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 20px;
+          display: flex;
+          align-items: center;
+          letter-spacing: 0.02em;
+          text-transform: capitalize;
+          color: #115292;
+        }
+        .rgt-text {
+          justify-content: flex-end;
+          text-align: right;
+        }
+      }
+    }
+    .enter-password-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin: 24px 0px;
+      width: 100%;
+      input {
+        width: 377px;
+        height: 40px;
+        background: #ffffff;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.24);
+        border-radius: 4px;
+        border: none;
+        font-family: "Work Sans";
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 21px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+      }
+      input:focus,
+      input:hover {
+        outline: none !important;
+        border-color: darken(rgba(0, 0, 0, 0.24), 2%);
+        box-shadow: 0px 2px 2px darken(#5c5e5e, 2%);
+      }
+      textarea:focus {
+        outline: none !important;
+      }
+    }
+    .confirm-password-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin: 0px 0px 20px 0px;
+      width: 100%;
+      .password-button {
+        width: 377px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 97px;
+        border: none;
+        background: #43babf;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+        align-self: stretch;
+        font-family: "Work Sans";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 21px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        text-transform: uppercase;
+        color: #ffffff;
+        cursor: pointer;
+        align-self: center;
+      }
+      &:hover {
+        .password-button {
+          background: darken(#43babf, 5%);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .BetSlip {
+    .content {
+      padding: 3px;
+    }
+  }
+}

@@ -1,0 +1,389 @@
+@import "../../App.scss";
+
+.Login3 {
+  display: flex;
+  flex-direction: column;
+  background: url(../../login3/login3-bg.svg) top / cover no-repeat;
+  min-height: 100vh;
+  justify-content: center;
+
+  .countrylines {
+    max-width: 290px;
+    display: flex;
+    align-self: center;
+    margin-bottom: 46px;
+    margin-top: 40px;
+  }
+  .Login-container3 {
+    display: flex;
+    flex-direction: row;
+    background: #115292;
+    width: 70%;
+    align-self: center;
+    background: #ffffff;
+    box-shadow: 0px 0px 30px #bfddeb;
+    border-radius: 25px;
+    margin-bottom: 50px;
+
+    .Right-container {
+      flex-basis: 50%;
+      min-height: 780px;
+      width: 100%;
+      text-align: -webkit-center;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      background: linear-gradient(180deg, #bfddeb 0%, #115292 99.97%);
+      backdrop-filter: blur(30px);
+      border-radius: 0 25px 25px 0;
+      .title,
+      .content {
+        font-family: "Roboto", sans-serif;
+        font-style: normal;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #ffffff;
+        width: 75%;
+        justify-content: center;
+      }
+
+      .title {
+        font-weight: 800;
+        font-size: 3rem;
+      }
+
+      .content {
+        font-weight: 600;
+        font-size: 1.5rem;
+        width: 75%;
+        margin-top: 15px;
+      }
+
+      img {
+        max-width: 700px;
+      }
+    }
+
+    .Left-container {
+      flex-basis: 50%;
+      text-align: -webkit-center;
+      width: 100%;
+      height: 100%;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      align-self: center;
+
+      .logo {
+        display: flex;
+        width: 50%;
+        justify-content: center;
+        .title {
+          font-family: "Roboto", sans-serif;
+          font-style: normal;
+          font-weight: 800;
+          font-size: 48px;
+          line-height: 65px;
+          display: flex;
+          align-items: center;
+          text-align: center;
+          color: #115292;
+        }
+      }
+      .title {
+        font-family: "Roboto", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+        color: #115292;
+        margin-top: 18px;
+      }
+
+      .form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 82%;
+
+        .input-container {
+          width: 100%;
+
+          height: auto;
+          margin-bottom: 25px;
+
+          background: rgba(191, 221, 235, 0.2);
+          border-radius: 15px;
+
+          .input-label {
+            font-family: "Roboto", sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            color: #115292;
+            padding: 15px 15px 0px;
+          }
+
+          input {
+            font-family: "Roboto", sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 1.25rem;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            color: #115292;
+            background-color: transparent;
+            border: unset;
+            padding: 5px 15px 10px;
+          }
+
+          input:focus {
+            outline: none;
+          }
+        }
+
+        .input-container:first-of-type {
+          margin: 35px 0;
+        }
+
+        .end-container {
+          display: flex;
+          flex-direction: row;
+          width: 87%;
+          place-content: space-between;
+          .checkbox-container {
+            display: flex;
+            flex-direction: row;
+
+          input[type="checkbox"] {
+            opacity: 0;
+            position: absolute;
+            z-index: 10;
+            transform: scale(1.5);
+            cursor: pointer;
+          }
+
+          input[type="checkbox"] + .label {
+            padding-left: 30px;
+            position: relative;
+          }
+
+          input[type="checkbox"] + .label::before {
+            display: block;
+            border: 1px solid #115292;
+            border-radius: 25%;
+            left: -5px;
+            height: 20px;
+            width: 20px;
+            content: "";
+            position: absolute;
+          }
+
+          input[type="checkbox"]:checked + .label::before {
+            content: "✓";
+          }
+
+            .label {
+              font-family: "Roboto", sans-serif;
+              font-style: normal;
+              font-weight: 700;
+              font-size: 1.25rem;
+              display: flex;
+              align-items: center;
+              color: #115292;
+            }
+          }
+
+          .fp-container {
+            a {
+              font-family: "Roboto", sans-serif;
+              font-style: normal;
+              font-weight: 700;
+              font-size: 1.25rem;
+              display: flex;
+              align-items: center;
+              color: #115292;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+
+      .button {
+        display: flex;
+        margin-top: 47px;
+        width: 100%;
+        place-content: center;
+
+        button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          border: none;
+          outline: none;
+          background: linear-gradient(
+            266.37deg,
+            #115292 27.2%,
+            #73a0c4 75.99%,
+            #bfddeb 91.81%
+          );
+          box-shadow: 0px 0px 20px rgba(112, 169, 161, 0.25);
+          border-radius: 25px;
+          width: 100%;
+          max-width: 300px;
+          height: 60px;
+
+          font-family: "Roboto", sans-serif;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 1.5rem;
+          line-height: 33px;
+
+          color: #ffffff;
+          cursor:  pointer;
+          img {
+            margin-left: 10px;
+          }
+          &:hover {
+            background: #115292;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1450px) {
+  .Login3 {
+    .Login-container3 {
+      .Left-container {
+        margin: 8% 40px;
+        .form {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  .Login3 {
+    justify-content: center;
+    padding-top: unset;
+    background-position: unset;
+    .countrylines {
+      display: none;
+    }
+    .Login-container3 {
+      flex-direction: column;
+      min-height: 100vh;
+      place-content: center;
+      background: unset;
+      box-shadow: unset;
+      width: 93%;
+      margin-bottom: unset;
+        min-height: unset;
+
+      .Right-container {
+        flex-basis: unset;
+        min-height: unset;
+        background: unset;
+        backdrop-filter: unset;
+        order: 0;
+        margin-top: 10%;
+
+        .title,
+        .content {
+          width: 93%;
+          color: #115292;
+        }
+
+        .title {
+          padding-top: 10%;
+          font-size: 2.25rem;
+        }
+
+        .content {
+          font-size: 0.75rem;
+          max-width: 70%;
+        }
+        img {
+          display: none;
+        }
+      }
+
+      .Left-container {
+        flex-basis: unset;
+        align-self: center;
+        margin: 34px 0 15%;
+        padding: 50px 0;
+        width: 100%;
+        border-radius: 25px;
+        order: 1;
+
+        background: #ffffff;
+        box-shadow: 0px 0px 30px #bfddeb;
+        .logo {
+          width: 63%;
+          place-content: center;
+        }
+
+        .title {
+          font-size: 1.5rem;
+          margin-top: 30px;
+        }
+
+        .form {
+          width: 87.5%;
+          .input-container:first-of-type {
+            margin: 20px 0;
+          }
+          .end-container {
+            width: 100%;
+
+            .checkbox-container {
+              .label {
+                font-size: 1rem;
+              }
+
+              input[type="checkbox"] + .label::before {
+              height: 14px;
+              width: 14px;
+              left: 3px;
+            }
+            }
+
+            .fp-container {
+              a {
+                font-size: 1rem;
+              }
+            }
+          }
+        }
+
+        .button {
+          button {
+            max-width: 170px;
+            height: 50px;
+
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}

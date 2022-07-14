@@ -1,0 +1,62 @@
+@import "./assets/font-awesome/scss/fontawesome.scss";
+@import "./assets/font-awesome/scss/brands.scss";
+@import "./assets/font-awesome/scss/regular.scss";
+@import "./assets/font-awesome/scss/solid.scss";
+@import "./assets/font-awesome/scss/v4-shims.scss";
+
+.App {
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; // not neccesary
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh !important;
+  overflow: hidden;
+}
+
+//-------- MEDIAQUERIES --------
+$tablet: 700px;
+$desktop: 900px;
+$desktop_m: 1680px;
+$desktop_xl: 1920px;
+
+/*-------- MIXINS MEDIA QUERIES = @MEDIA @CONTENT --------
+*/
+
+@mixin phone {
+  @media (max-width: #{$tablet - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet}) and (max-width: #{$desktop - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin desktop_hd {
+  @media (min-width: #{$desktop_m}) and (max-width: #{$desktop_xl}) {
+    @content;
+  }
+}
+
+@mixin devices {
+  @media (max-width: #{$desktop - 1px}) {
+    @content;
+  }
+}
+
+@mixin portrait {
+  @media (orientation: portrait) {
+    @content;
+  }
+}

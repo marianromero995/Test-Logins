@@ -1,0 +1,40 @@
+@import "../../App.scss";
+
+.Yellow-button-container {
+  .yellow-button {
+    width: 503px;
+    height: 62px;
+    background: #ffcd00;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    border: none;
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 42px;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  &:hover {
+    .yellow-button {
+      background: darken(#ffcd00, 2%);
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .Yellow-button-container {
+    width: 100%;
+    padding: 15px;
+    cursor: pointer;
+    .yellow-button {
+      width: 100%;
+      height: 50px;
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+}

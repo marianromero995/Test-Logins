@@ -1,0 +1,188 @@
+@import "../../App.scss";
+
+.User-menu {
+  width: 275px;
+  top: 60px;
+  background-color: #1666b5;
+  position: absolute;
+  z-index: 1000;
+  align-self: flex-end;
+  padding-bottom: 10px;
+  hr {
+    width: 260px;
+    border-radius: 0px;
+    background-color: #ffffff;
+  }
+  .User-menu-row {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    height: 40px;
+    width: 100%;
+    margin: 8px 0px;
+    .User-menu-avatar {
+      width: 30%;
+      display: flex;
+      place-content: center;
+      .img {
+        height: 30px;
+        width: 30px;
+      }
+    }
+    .User-menu-item-text {
+      span {
+        font-family: "Work Sans";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 30px;
+        letter-spacing: 0.15px;
+        text-align: left;
+        color: #ffffff;
+      }
+    }
+    .User-menu-item {
+      display: flex;
+      flex-direction: row;
+      height: 40px;
+      width: 100%;
+      align-items: center;
+      justify-content: flex-start;
+      padding-left: 15px;
+      .User-menu-item-text {
+        height: 21px;
+        width: 204px;
+        span {
+          font-family: "Work Sans";
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 21px;
+          letter-spacing: 0.25px;
+          text-align: left;
+        }
+      }
+      .User-menu-arrow {
+        height: 5px;
+        width: 10px;
+        padding: 0px 0px 0px 25px;
+      }
+    }
+    .User-menu-options {
+      display: flex;
+      flex-direction: row;
+      height: 39px;
+      border-radius: 4px;
+      align-items: center;
+      justify-content: center;
+      .User-menu-img {
+        height: 24px;
+        width: 24px;
+        padding-left: 10px;
+      }
+      .User-menu-item-text {
+        height: 21px;
+        text-align: start;
+        margin-left: 25px;
+        span {
+          font-family: "Work Sans";
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 21px;
+          letter-spacing: 0.1px;
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  .User-menu-balance-row {
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    padding: 0px 10px;
+    place-content: space-around;
+    .User-menu-item {
+      display: flex;
+      flex-direction: column;
+      .User-menu-item-text {
+        height: 21px;
+        span {
+          font-family: "Work Sans";
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 21px;
+          letter-spacing: 0.25px;
+          text-align: center;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+
+  .User-menu-options-row {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    height: 40px;
+    width: 100%;
+
+    justify-content: center;
+    .User-menu-option {
+      display: flex;
+      flex-direction: row;
+      height: 39px;
+      width: 260px;
+      border-radius: 4px;
+      align-items: center;
+      cursor: pointer;
+      .User-menu-img {
+        height: 24px;
+        width: 24px;
+        padding-left: 10px;
+      }
+      .User-menu-item-text {
+        height: 21px;
+        text-align: start;
+        margin-left: 25px;
+        span {
+          font-family: "Work Sans";
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 21px;
+          letter-spacing: 0.1px;
+          text-align: left;
+          color: #ffffff;
+        }
+      }
+      &:hover,
+      &:active {
+        .User-menu-item-text {
+          span {
+            color: #1666b5;
+          }
+        }
+
+        .User-menu-img {
+          filter: invert(32%) sepia(82%) saturate(7224%) hue-rotate(200deg)
+            brightness(89%) contrast(83%);
+        }
+      }
+    }
+    &:hover,
+    &:active {
+      .User-menu-option {
+        background-color: #e3f2fd;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .User-menu {
+    top: 52px;
+  }
+}

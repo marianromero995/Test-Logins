@@ -1,0 +1,19 @@
+@import "../../App.scss";
+
+.Container-Landing {
+  background-image: url("../../assets/login_background.jpg");
+  width: 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  background-size: 100% 85%;
+  min-height: 100vh;
+  .Footer-landing {
+    display: block;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+  }
+}

@@ -1,0 +1,41 @@
+@import "../../App.scss";
+
+.Betting-Box-Down-Header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 0px;
+  width: 100%;
+  height: 20px;
+  background: #ffcd00;
+  .title {
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #115292;
+  }
+}
+
+@media (max-width: 900px) {
+  .Betting-Box-Down-Header {
+    .title {
+      font-size: 15px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .Betting-Box-Down-Header {
+    height: 15px;
+    padding: 2px 0px;
+    .title {
+      font-size: 11px;
+    }
+  }
+}

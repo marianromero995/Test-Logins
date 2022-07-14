@@ -1,0 +1,330 @@
+ @import "../../App.scss";
+
+.Login-container2 {
+  display: flex;
+  flex-direction: row;
+  background: #115292;
+
+  .Left-container {
+    flex-basis: 60%;
+    min-height: 100vh;
+    width: 100%;
+    text-align: -webkit-center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .title,
+    .content {
+      font-family: "Roboto", sans-serif;
+      font-style: normal;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: #ffffff;
+      width: 75%;
+      justify-content: center;
+    }
+
+    .title {
+      font-weight: 800;
+      font-size: 4rem;
+      padding-top: 160px;
+    }
+
+    .content {
+      font-weight: 600;
+      font-size: 1.5rem;
+      width: 75%;
+      margin-top: 15px;
+    }
+
+    img {
+      max-width: 700px;
+    }
+  }
+
+  .Right-container {
+    flex-basis: 40%;
+    margin: 8% 90px;
+    padding: 5% 0;
+    text-align: -webkit-center;
+
+    background: #20609f;
+    box-shadow: 0px 0px 25px #115292;
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+
+    max-width: 650px;
+    .logo {
+      display: flex;
+      width: 50%;
+      img {
+        width: 100%;
+        max-width: 350px;
+      }
+    }
+    .title {
+      font-family: "Roboto", sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 2.25rem;
+      display: flex;
+      align-items: center;
+      text-align: center;
+
+      color: #ffffff;
+      margin-top: 50px;
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 82%;
+
+      .input-container {
+        width: 100%;
+
+        height: auto;
+        margin-bottom: 25px;
+
+        background: rgba(191, 221, 235, 0.2);
+        border-radius: 15px;
+
+        .input-label {
+          font-family: "Roboto", sans-serif;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 1rem;
+          display: flex;
+          align-items: center;
+          color: #ffffff;
+          padding: 15px 15px 0px;
+        }
+
+        input {
+          font-family: "Roboto", sans-serif;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 1.25rem;
+          display: flex;
+          align-items: center;
+          width: 100%;
+          color: #ffffff;
+          background-color: transparent;
+          border: unset;
+          padding: 5px 15px 10px;
+        }
+
+        input:focus {
+          outline: none;
+        }
+      }
+
+      .input-container:first-of-type {
+        margin: 35px 0;
+      }
+
+      .end-container {
+        display: flex;
+        flex-direction: row;
+        width: 87%;
+        place-content: space-between;
+        .checkbox-container {
+          display: flex;
+          flex-direction: row;
+
+          .label {
+            font-family: "Roboto", sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 1.25rem;
+            display: flex;
+            align-items: center;
+            color: #ffffff;
+          }
+
+          input[type="checkbox"] {
+            opacity: 0;
+            position: absolute;
+            z-index: 10;
+            transform: scale(1.5);
+            cursor: pointer;
+          }
+
+          input[type="checkbox"] + .label {
+            padding-left: 30px;
+            position: relative;
+          }
+
+          input[type="checkbox"] + .label::before {
+            display: block;
+            border: 1px solid #FFFFFF;
+            border-radius: 25%;
+            left: -5px;
+            height: 20px;
+            width: 20px;
+            content: "";
+            position: absolute;
+          }
+
+          input[type="checkbox"]:checked + .label::before {
+            content: "✓";
+          }
+        }
+
+        .fp-container {
+          a {
+            font-family: "Roboto", sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 1.25rem;
+            display: flex;
+            align-items: center;
+            color: #ffffff;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    .button {
+      display: flex;
+      margin-top: 47px;
+      width: 100%;
+      place-content: center;
+
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border: none;
+        outline: none;
+        background: #ffffff;
+        border-radius: 25px;
+        width: 100%;
+        max-width: 300px;
+        height: 60px;
+
+        font-family: "Roboto", sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1.5rem;
+        line-height: 33px;
+
+        color: #115292;
+        cursor:  pointer;
+
+        img {
+          margin-left: 10px;
+        }
+        &:hover {
+          background:  #dadada;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1450px) {
+  .Login-container2 {
+    .Right-container {
+      margin: 8% 40px;
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  .Login-container2 {
+    flex-direction: column;
+    min-height: 100vh;
+    place-content: center;
+
+    .Left-container {
+      flex-basis: unset;
+      min-height: unset;
+      background: unset;
+
+      .title,
+      .content {
+        width: 93%;
+      }
+
+      .title {
+        padding-top: 15%;
+        font-size: 2.25rem;
+      }
+
+      .content {
+        font-size: 0.75rem;
+        max-width: 70%;
+      }
+      img {
+        display: none;
+      }
+    }
+
+    .Right-container {
+      flex-basis: unset;
+      align-self: center;
+      margin: 34px 0 15%;
+      padding: 50px 0;
+      width: 92%;
+      border-radius: 25px;
+      .logo {
+        width: 63%;
+        place-content: center;
+      }
+
+      .title {
+        font-size: 1.5rem;
+        margin-top: 30px;
+      }
+
+      .form {
+        .input-container:first-of-type {
+          margin: 20px 0;
+        }
+        .end-container {
+          width: 100%;
+
+          .checkbox-container {
+            .label {
+              font-size: 1rem;
+            }
+                        input[type="checkbox"] + .label::before {
+              height: 14px;
+              width: 14px;
+              left: 3px;
+            }
+          }
+
+          .fp-container {
+            a {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+
+      .button {
+        button {
+          max-width: 170px;
+          height: 50px;
+
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}

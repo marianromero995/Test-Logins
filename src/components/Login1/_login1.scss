@@ -1,0 +1,305 @@
+@import "../../App.scss";
+
+.Login1 {
+  display: flex;
+  flex-direction: row;
+
+  .Left-container {
+    flex-basis: 60%;
+    background: url(../../login1/login1-bg.svg) top / cover no-repeat;
+    min-height: 100vh;
+    width: 100%;
+    text-align: -webkit-center;
+
+    .title,
+    .content {
+      font-family: "Roboto", sans-serif;
+      font-style: normal;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: #ffffff;
+      width: 75%;
+      justify-content: center;
+    }
+
+    .title {
+      font-weight: 800;
+      font-size: 4rem;
+      padding-top: 160px;
+    }
+
+    .content {
+      font-weight: 600;
+      font-size: 1.5rem;
+      width: 75%;
+      margin-top: 15px;
+    }
+  }
+
+  .Login-container {
+    flex-basis: 40%;
+    align-self: center;
+    margin: 200px 0px;
+    text-align: -webkit-center;
+    flex-direction: column;
+    .logo {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      img {
+        width: 100%;
+        max-width: 350px;
+      }
+    }
+    .title {
+      font-family: "Roboto", sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 2.25rem;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: #70a9a1;
+      place-content: center;
+      margin-top: 30px;
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .input-container {
+        width: 85%;
+
+        background: rgba(207, 224, 195, 0.2);
+        border-radius: 15px;
+        height: auto;
+        margin-bottom: 25px;
+
+        .input-label {
+          font-family: "Roboto", sans-serif;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 1rem;
+          display: flex;
+          align-items: center;
+          color: #70a9a1;
+          padding: 15px 15px 0px;
+        }
+
+        input {
+          font-family: "Roboto", sans-serif;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 1.25rem;
+          display: flex;
+          align-items: center;
+          width: 100%;
+          color: #70a9a1;
+          background-color: transparent;
+          border: unset;
+          padding: 5px 15px 10px;
+        }
+
+        input:focus {
+          outline: none;
+        }
+      }
+
+      .input-container:first-of-type {
+        margin: 35px 0;
+      }
+
+      .end-container {
+        display: flex;
+        flex-direction: row;
+        width: 70%;
+        place-content: space-between;
+        .checkbox-container {
+          display: flex;
+          flex-direction: row;
+
+          .label {
+            font-family: "Roboto", sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 1.25rem;
+            display: flex;
+            align-items: center;
+            color: #70a9a1;
+          }
+
+          input[type="checkbox"] {
+            opacity: 0;
+            position: absolute;
+            z-index: 10;
+            transform: scale(1.5);
+            cursor: pointer;
+          }
+
+          input[type="checkbox"] + .label {
+            padding-left: 30px;
+            position: relative;
+          }
+
+          input[type="checkbox"] + .label::before {
+            display: block;
+            border: 1px solid #70A9A1;
+            border-radius: 25%;
+            left: -5px;
+            height: 20px;
+            width: 20px;
+            content: "";
+            position: absolute;
+          }
+
+          input[type="checkbox"]:checked + .label::before {
+            content: "✓";
+          }
+        }
+
+        .fp-container {
+          a {
+            font-family: "Roboto", sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 1.25rem;
+            display: flex;
+            align-items: center;
+            color: #70a9a1;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    .button {
+      display: flex;
+      margin-top: 47px;
+      width: 100%;
+      place-content: center;
+
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        outline: none;
+        background: #70a9a1;
+        border-radius: 25px;
+        width: 100%;
+        max-width: 300px;
+        height: 60px;
+
+        font-family: "Roboto", sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1.5rem;
+        line-height: 33px;
+        color: #ffffff;
+
+        cursor:  pointer;
+  
+        img {
+          margin-left: 10px;
+        }
+        &:hover {
+          background: #599189;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  .Login1 {
+    flex-direction: column;
+    background: url(../../login1/login1-bg.svg) top / cover no-repeat;
+    min-height: 100vh;
+    place-content: center;
+
+    .Left-container {
+      flex-basis: unset;
+      min-height: unset;
+      background: unset;
+      margin-bottom: 35px;
+
+      .title,
+      .content {
+        width: 93%;
+      }
+
+      .title {
+        padding-top: 8%;
+        font-size: 2.25rem;
+      }
+
+      .content {
+        font-size: 0.75rem;
+        max-width: 70%;
+      }
+    }
+
+    .Login-container {
+      flex-basis: unset;
+      align-self: center;
+      margin: unset;
+      padding: 50px 0;
+      width: 92%;
+      background-color: #ffffff;
+      background: #ffffff;
+      box-shadow: 0px 0px 20px rgba(207, 224, 195, 0.25);
+      border-radius: 25px;
+      margin-bottom: 8%;
+      min-height: unset;
+      .logo {
+        place-content: center;
+        img {
+          max-width: 175px;
+        }
+      }
+
+      .title {
+        font-size: 1.5rem;
+        margin-top: 30px;
+      }
+
+      .form {
+        .end-container {
+          width: 85%;
+
+          .checkbox-container {
+            .label {
+              font-size: 1rem;
+            }
+
+            input[type="checkbox"] + .label::before {
+              height: 14px;
+              width: 14px;
+              left: 3px;
+            }
+  
+          }
+
+          .fp-container {
+            a {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+
+      .button {
+        button {
+          max-width: 170px;
+          height: 50px;
+
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}

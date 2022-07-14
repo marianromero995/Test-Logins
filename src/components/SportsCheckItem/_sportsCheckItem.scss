@@ -1,0 +1,75 @@
+@import "../../App.scss";
+
+.Check-Menu-Item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  background: #115292;
+
+  height: 56px;
+  width: 100%;
+  border-radius: 4px;
+
+  padding: 0 16px;
+  margin: 7px 0px;
+
+  .checkbox-container {
+    display: flex;
+    flex-direction: row;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+
+    .check-text {
+      font-family: "Work Sans";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 36px;
+      line-height: 21px;
+      margin-left: 15px;
+      display: flex;
+      align-items: center;
+      margin-left: 16px;
+      color: #ffffff;
+    }
+
+    input {
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+
+    input:checked ~ .checkmark {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+    }
+
+    .checkmark {
+      height: 30px;
+      width: 30px;
+      border: 4px solid #ffffff;
+      box-sizing: border-box;
+      border-radius: 4px;
+      color: transparent;
+    }
+
+    .checkmark:hover {
+      background-color: darken(#115292, 5%);
+    }
+    .checkmark:after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+
+    input:checked ~ .checkmark:after {
+      display: block;
+    }
+  }
+}

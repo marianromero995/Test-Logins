@@ -1,0 +1,55 @@
+@import "../../App.scss";
+
+.Home-Menu-Item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  background: #c4c4c4;
+  border-radius: 4px;
+  position: inherit;
+  margin: 0px 0px 8px 0px;
+  cursor: pointer;
+  padding: 1px 0px;
+  span {
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    align-self: stretch;
+    margin: 10px 0px;
+    padding: 0px 16px;
+  }
+}
+.Home-Menu-Item:hover,
+.Home-Menu-Item:active,
+.Home-Menu-Item:focus {
+  background-color: #115292;
+}
+
+@media (max-width: 900px) {
+  .Home-Menu-Item {
+    padding: 4px 0px;
+    span {
+      place-self: center;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .Home-Menu-Item {
+    height: 20px;
+    margin: 3px 3px;
+    padding: 4px 0px;
+    span {
+      font-size: 18px;
+      place-self: center;
+    }
+  }
+}

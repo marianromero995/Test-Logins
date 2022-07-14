@@ -1,0 +1,104 @@
+@import "../../App.scss";
+
+.Container-home {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  .Container-bets {
+    display: flex;
+    flex-direction: row;
+    padding: 3.5% 4.5% 1% 4.5%;
+    min-height: 60vh;
+    .Container-home-menu {
+      flex-basis: 20%;
+    }
+    .Container-sports-menu {
+      width: 100%;
+      margin-left: 5%;
+      flex-basis: 75%;
+      display: flex;
+      flex-direction: column;
+      place-content: start;
+      &-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .Container-sports-menu-item {
+          height: auto;
+          border: 1px solid rgba(196, 196, 196, 0.05);
+          box-sizing: border-box;
+          border-radius: 4px;
+          width: 46.8%;
+        }
+      }
+    }
+  }
+  .Container-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 900px) {
+  .Container-home {
+    .Container-bets  {
+      margin: 0px;
+      padding: 15px;
+      flex-direction: column;
+      min-height: 70vh;
+      .Container-home-menu {
+        flex-basis: unset;
+        margin: 10px 0 20px 0;
+        .Home-Menu-Container {
+          margin: 0px;
+        }
+      }
+      .Container-sports-menu {
+        flex-basis: unset;
+        margin-left: 0%;
+        &-row {
+          .Container-sports-menu-item {
+          }
+        }
+      }
+    }
+    .Container-button {
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .Container-home {
+    .Container-bets {
+      margin: 0px;
+      padding: 15px;
+      overflow-y: scroll;
+      min-height: 680px;
+      .Container-home-menu {
+        margin: 0;
+      }
+      .Container-sports-menu {
+        margin: 7px 0 0 0;
+        flex-basis: 0%;
+        &-row {
+          flex-direction: column;
+          .Container-sports-menu-item {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .Container-button {
+      position: fixed;
+      z-index: 1000;
+      bottom: 0px;
+      left: 0px;
+      right: 0px;
+      background-color: #ffffff;
+      margin-bottom: 0px;
+    }
+  }
+}

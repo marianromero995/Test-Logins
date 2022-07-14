@@ -1,0 +1,78 @@
+@import "../../App.scss";
+
+.Check-Menu-Item-White {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: 45px;
+  width: 100%;
+  border-radius: 4px;
+  padding: 0 0 0 16px;
+  .checkbox-container {
+    display: flex;
+    flex-direction: row;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+
+    .check-text {
+      font-family: "Work Sans";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 21px;
+      margin-left: 15px;
+      display: flex;
+      align-items: center;
+      margin-left: 16px;
+      color: #115292;
+    }
+
+    input {
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+
+    input:checked ~ .checkmark {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #ffcd00;
+      border: 2px solid #ffcd00;
+    }
+
+    .checkmark {
+      height: 18px;
+      width: 18px;
+      border: 2px solid #115292;
+      box-sizing: border-box;
+      border-radius: 4px;
+      color: transparent;
+    }
+    .checkmark:after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+
+    input:checked ~ .checkmark:after {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .Check-Menu-Item-White {
+    .checkbox-container {
+      .check-text {
+        font-weight: 550;
+        font-size: 20px;
+      }
+    }
+  }
+}

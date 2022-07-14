@@ -1,0 +1,76 @@
+@import "../../App.scss";
+
+.Container-sports {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly;
+  margin-bottom: 40px;
+  .Container-betting-box {
+    display: block;
+    margin-top: 10px;
+    width: 57%;
+  }
+  .Container-BetSlip {
+    margin-top: 10px;
+    width: 28%;
+    .BetSlip-mobile-content {
+      display: none;
+    }
+    .BetSlip-mobile-no-content {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .Container-sports {
+    .Container-betting-box {
+      width: 57%;
+    }
+    .Container-BetSlip {
+      width: 32%;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .Container-sports {
+    flex-direction: column;
+    .Container-betting-box {
+      margin-top: 0px;
+      width: 100%;
+      margin-bottom: 70px;
+    }
+    .Container-BetSlip {
+      position: fixed;
+      z-index: 1000;
+      margin-bottom: 0px;
+      width: 100%;
+      .desktop {
+        display: none;
+      }
+      .BetSlip-mobile-content {
+        display: block;
+        z-index: 1000;
+        margin-bottom: 0px;
+        position: fixed;
+        z-index: 1000;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        margin-bottom: 0px;
+      }
+      .BetSlip-mobile-no-content {
+        display: block;
+        position: fixed;
+        z-index: 1000;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        background-color: #ffffff;
+        margin-bottom: 0px;
+      }
+    }
+  }
+}

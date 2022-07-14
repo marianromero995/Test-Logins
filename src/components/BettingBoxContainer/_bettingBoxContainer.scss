@@ -1,0 +1,17 @@
+@import "../../App.scss";
+
+.Betting-Box-Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 4px;
+  align-self: center;
+  border: 1px solid #115292;
+}
+
+@media (max-width: 600px) {
+  .Betting-Box-Container {
+    margin: 0;
+  }
+}
