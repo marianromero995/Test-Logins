@@ -24,7 +24,7 @@ function App() {
   };
   return (
     <div className="App">
-      <RenderView />
+    <Login2 setView={setView} />
     </div>
   );
 }

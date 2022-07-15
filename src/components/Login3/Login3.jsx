@@ -29,10 +29,11 @@ const Login = ({ setView }) => {
               <input type="password" />
             </div>
             <div className="end-container">
-              <div className="checkbox-container">
+              <label className="checkbox-container">
                 <input type="checkbox" />
-                <div className="label">Remember me</div>
-              </div>
+                <span className="checkmark" />
+                <span className="label"> Remember me</span>
+              </label>
               <div className="fp-container">
                 <a className="link" href="/">
                   Forgot password?
